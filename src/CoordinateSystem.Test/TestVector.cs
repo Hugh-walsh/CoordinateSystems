@@ -34,8 +34,8 @@ namespace CoordinateSystem.Test
         [TestMethod]
         public void TestCreateFromPoints()
         {
-            Point pointA = new Point {X = 2.0, Y = 2.0, Z = 2.0};
-            Point pointB = new Point { X = 3.0, Y = 3.0, Z = 3.0 };
+            Point pointA = new Point {_x = 2.0, _y = 2.0, _z = 2.0};
+            Point pointB = new Point { _x = 3.0, _y = 3.0, _z = 3.0 };
             Vector vector = pointB - pointA;
 
             Assert.IsInstanceOfType(vector, typeof(Vector));

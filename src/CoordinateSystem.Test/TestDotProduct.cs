@@ -13,20 +13,31 @@ namespace CoordinateSystem.Test
             UnitVector unitX = UnitVector.XDC();
             UnitVector unitY = UnitVector.YDC();
             UnitVector unitZ = UnitVector.ZDC();
-            double dotProductXY = unitX.DotProduct(unitY);
-            double dotProductYZ = unitY.DotProduct(unitZ);
-            double dotProductXX = unitX.DotProduct(unitX);
+            double dotProductXY = Vector.DotProduct(unitX, unitY);
+            double dotProductYZ = Vector.DotProduct(unitY, unitZ);
+            double dotProductXX = Vector.DotProduct(unitX, unitX);
             Assert.AreEqual(expected: 0.0, actual: dotProductXY);
             Assert.AreEqual(expected: 0.0, actual: dotProductYZ);
             Assert.AreEqual(expected: 1.0, actual: dotProductXX);
         }
+
+        //[DataTestMethod]
+        //[DataRow(0, 1, 0, 0, 1, 2, 3)]
+        //public void TestUnitaryaVectors (double expected, double xa, double ya, double za, UnitVector unitY)
+        //{
+        //    var unitX = new UnitVector();
+        //    var unitY = new UnitVector();
+
+        //    double dotProductXY = Vector.DotProduct(unitX, unitY);
+        //    Assert.AreEqual(expected: expected, actual: dotProductXY);
+        //}
 
         [TestMethod]
         public void TestVectors()
         {
             Vector vectorA = new Vector(x: 1, y: 1, z: 1);
             Vector vectorB = new Vector(x: 1, y: 1, z: 1);
-            double dotProduct = vectorA.DotProduct(vectorB);
+            double dotProduct = Vector.DotProduct(vectorA, vectorB);
 
             Assert.AreEqual(expected: 3.0, actual: dotProduct);
 

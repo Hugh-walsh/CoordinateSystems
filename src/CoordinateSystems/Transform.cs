@@ -7,7 +7,7 @@ namespace CoordinateSystems
     /// <summary>
     /// The transformation matrix or coordinate system
     /// </summary>
-    public class CoordinateSystem
+    public class Transform
 
     {
         /// <summary>

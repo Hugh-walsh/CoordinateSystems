@@ -5,7 +5,7 @@ using CoordinateSystems;
 namespace CoordinateSystem.Test
 {
     [TestClass]
-    class TestScalarMultiply
+    public class TestScalarMultiply
     {
         [TestMethod]
         public void TestScalarMultiplyVector()

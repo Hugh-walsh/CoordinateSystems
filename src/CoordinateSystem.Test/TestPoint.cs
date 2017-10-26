@@ -7,13 +7,16 @@ namespace CoordinateSystem.Test
     [TestClass]
     public class TestPoint
     {
-        [TestMethod]
-        public void TestCreate()
+        [DataTestMethod]
+        [DataRow(1, 2, 3)]
+        [DataRow(1, 21, 3)]
+        [DataRow(11, 2, 3)]
+        public void TestCreate(double x, double y, double z)
         {
-            Point point = new Point();
-            Assert.AreEqual(0.0, point.X);
-            Assert.AreEqual(0.0, point.Y);
-            Assert.AreEqual(0.0, point.Z);
+            Point point = new Point(x,y,z);
+            Assert.AreEqual(x, point._x);
+            Assert.AreEqual(y, point._y);
+            Assert.AreEqual(z, point._z);
         }
     }
 }
