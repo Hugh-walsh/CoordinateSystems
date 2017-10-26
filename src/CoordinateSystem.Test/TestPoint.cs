@@ -1,6 +1,6 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CorodinateSystems;
+using CoordinateSystems;
 
 namespace CoordinateSystem.Test
 {
@@ -8,9 +8,9 @@ namespace CoordinateSystem.Test
     public class TestPoint
     {
         [TestMethod]
-        public void TestDefault()
+        public void TestCreate()
         {
-            var point = new Point();
+            Point point = new Point();
             Assert.AreEqual(0.0, point.X);
             Assert.AreEqual(0.0, point.Y);
             Assert.AreEqual(0.0, point.Z);

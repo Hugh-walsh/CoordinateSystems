@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CorodinateSystems
+namespace CoordinateSystems
 {
     /// <summary>
     /// The transformation matrix or coordinate system
     /// </summary>
     public class CoordinateSystem
+
     {
         /// <summary>
         /// Direction cosine in the X direction
