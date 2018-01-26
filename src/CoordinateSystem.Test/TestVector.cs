@@ -2,6 +2,8 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CoordinateSystems;
 
+
+
 namespace CoordinateSystem.Test
 {
     [TestClass]
@@ -14,6 +16,15 @@ namespace CoordinateSystem.Test
             Assert.AreEqual(0.0, vector.X);
             Assert.AreEqual(0.0, vector.Y);
             Assert.AreEqual(0.0, vector.Z);
+
+
+            var v = MathNet.Numerics.LinearAlgebra.CreateVector.Dense<double>(3);
+            var A = MathNet.Numerics.LinearAlgebra.Double.DenseMatrix.OfArray(new double[,] {
+        {1,1,1,1},
+        {1,2,3,4},
+        {4,3,2,1}});
+            var nullspace = A.Kernel();
+
         }
 
         [TestMethod]
